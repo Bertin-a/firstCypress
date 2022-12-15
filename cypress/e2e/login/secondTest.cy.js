@@ -15,8 +15,9 @@ describe('create and mark-unmark as favorite', ()=>{
         cy.contains('Global Feed').should('be.visible')
     })
     
-    it('Verify that the user can create a post', () => {
-        cy.contains('New Post').click()
+    it.skip('Verify that the user can create a post', () => {
+        cy.get('.container > .nav > :nth-child(2) > .nav-link').contains('New Post').click()
+      
         cy.hash().should('include','#/editor')
      });
 
