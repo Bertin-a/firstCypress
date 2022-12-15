@@ -9,4 +9,10 @@ describe("Login",()=>{
 
 
     });
+   
+    it('create a post', () => {
+        cy.contains('New Post').click()
+        cy.hash().should('include','#/editor')
+     });
+
 })
